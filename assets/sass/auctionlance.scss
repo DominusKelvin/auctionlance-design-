@@ -1,0 +1,136 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 34px;
+    font-family: 'Lato', sans-serif;
+}
+
+/***
+    * Navbar
+***/
+nav {
+    height: 101px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    padding: 0 39px;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+
+    a.brand {
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        font-size: 28px;
+        color: $primary-color;
+        background: -webkit-linear-gradient($secondary-color, $primary-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+
+    }
+
+    .nav-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .left-nav, .right-nav {
+        font-family: 'Lato', sans-serif;
+        display: flex;
+        align-items: flex-end;
+        
+        .nav-link {
+            margin: 0 20px;
+            a {
+                @include transition;
+                &:hover {
+                    background: -webkit-linear-gradient($secondary-color, $primary-color);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+    
+}
+
+
+/***
+    * Hero section
+***/
+
+.hero {
+    background-color: $primary-color;
+    background: linear-gradient(270.26deg, rgba(255, 255, 255, 0) 3.36%, #E27B36 124.02%), #E21250;
+    margin-top: 102px;
+    height: 454px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .hero__info {
+        align-self: flex-start;
+        margin-top: 9%;
+        color: #FFFFFF;
+        .hero-title {
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            font-size: 34px;
+            margin-bottom: 14px;
+    
+        }
+        .hero-subtitle {
+            font-family: 'Lato', sans-serif;
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            font-size: 18px;
+            margin-bottom: 47px;
+    
+        }
+
+        .hero-search {
+            width: 620px;
+            height: 62px;
+            background: #FFFFFF;
+            border: 1px solid #E3E3E3;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 2px;
+            padding-left: 20px;
+            
+            display: flex;
+            
+            .hero-search__box {
+                margin-left: 10px;
+                font-family: 'Roboto', sans-serif;
+                font-style: normal;
+                line-height: normal;
+                font-weight: 600;
+                font-size: 16px;
+                color: #8C8787;
+                border: none;
+                width: 100%;
+                &:focus {
+                    outline: transparent;
+                }
+            }
+        }
+    }
+    
+}
