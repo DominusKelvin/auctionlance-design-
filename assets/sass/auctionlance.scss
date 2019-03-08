@@ -7,8 +7,13 @@ html {
 }
 
 h1 {
-    font-size: 34px;
+    font-size: $heading;
     font-family: 'Lato', sans-serif;
+    @media screen and (max-width: $mobile){
+        & {
+            font-size: $heading-sm;
+        }
+    }
 }
 
 /***
@@ -69,6 +74,8 @@ nav {
     
 }
 
+@media screen and (max-width: 768px) {
+}
 
 /***
     * Hero section
@@ -82,6 +89,19 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: $mobile) {
+        & {
+            height: 199px;
+        }
+    }
+    .hero__img {
+        @media screen and (max-width: $mobile) {
+            & {
+                width: 144px;
+                height: 107px;
+            }
+        }
+    }
     .hero__info {
         align-self: flex-start;
         margin-top: 9%;
@@ -90,9 +110,12 @@ nav {
             font-style: normal;
             font-weight: 800;
             line-height: normal;
-            font-size: 34px;
+            font-size: $heading;
             margin-bottom: 14px;
-    
+            @media screen and (max-width: $mobile) {
+                font-size: $heading-sm;
+                margin-bottom: 4px;
+            }
         }
         .hero-subtitle {
             font-family: 'Lato', sans-serif;
@@ -100,9 +123,16 @@ nav {
             font-style: normal;
             font-weight: 800;
             line-height: normal;
-            font-size: 18px;
+            font-size: $subtitle;
             margin-bottom: 47px;
-    
+            
+            @media screen and (max-width: $mobile) {
+                & {
+                    font-weight: normal;
+                    font-size: $subtitle-sm;
+                    margin-bottom: 12px;
+                }
+            }
         }
 
         .hero-search {
@@ -130,9 +160,22 @@ nav {
                     outline: transparent;
                 }
             }
+
+            @media screen and (max-width: $mobile) {
+                & {
+                    display: none;
+                }
+            }
         }
+
     }
     
+}
+
+@media screen and (max-width: $mobile) {
+    .hero {
+        flex-wrap: wrap;
+    }
 }
 
 /***
@@ -142,6 +185,14 @@ nav {
     margin-top: 115px;
     margin-left: 111px;
     margin-right: 111px;
+}
+
+@media screen and (max-width: $mobile) {
+    .explore, .featured, .how-auctionlance-works {
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }  
 }
 
 .categories {
@@ -191,7 +242,6 @@ nav {
 .featured {
     .featured-gigs {
         display: flex;
-        flex-wrap: wrap;
         .featured-gig {
             width: 283px;
             height: 342px;
@@ -230,6 +280,13 @@ nav {
             .featured-gig__author, .featured-gig__description {
                 margin: 9px 18px;
             }
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        .featured-gigs {
+            width: 200px;
+            overflow: auto;
         }
     }
 

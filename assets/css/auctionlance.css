@@ -65,6 +65,12 @@ h1 {
   font-family: 'Lato', sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 18px;
+  }
+}
+
 /***
     * Navbar
 ***/
@@ -159,6 +165,19 @@ nav .left-nav .nav-link a:hover, nav .right-nav .nav-link a:hover {
           align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 199px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero .hero__img {
+    width: 144px;
+    height: 107px;
+  }
+}
+
 .hero .hero__info {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -174,6 +193,13 @@ nav .left-nav .nav-link a:hover, nav .right-nav .nav-link a:hover {
   margin-bottom: 14px;
 }
 
+@media screen and (max-width: 768px) {
+  .hero .hero__info .hero-title {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+}
+
 .hero .hero__info .hero-subtitle {
   font-family: 'Lato', sans-serif;
   font-family: Lato;
@@ -182,6 +208,14 @@ nav .left-nav .nav-link a:hover, nav .right-nav .nav-link a:hover {
   line-height: normal;
   font-size: 18px;
   margin-bottom: 47px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero .hero__info .hero-subtitle {
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
 }
 
 .hero .hero__info .hero-search {
@@ -214,6 +248,19 @@ nav .left-nav .nav-link a:hover, nav .right-nav .nav-link a:hover {
   outline: transparent;
 }
 
+@media screen and (max-width: 768px) {
+  .hero .hero__info .hero-search {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 /***
     * Explore section
 ***/
@@ -221,6 +268,14 @@ nav .left-nav .nav-link a:hover, nav .right-nav .nav-link a:hover {
   margin-top: 115px;
   margin-left: 111px;
   margin-right: 111px;
+}
+
+@media screen and (max-width: 768px) {
+  .explore, .featured, .how-auctionlance-works {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
 .categories {
@@ -270,8 +325,6 @@ nav .left-nav .nav-link a:hover, nav .right-nav .nav-link a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .featured .featured-gigs .featured-gig {
@@ -314,6 +367,13 @@ nav .left-nav .nav-link a:hover, nav .right-nav .nav-link a:hover {
 
 .featured .featured-gigs .featured-gig .featured-gig__author, .featured .featured-gigs .featured-gig .featured-gig__description {
   margin: 9px 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .featured .featured-gigs {
+    width: 200px;
+    overflow: auto;
+  }
 }
 
 .featured .featured-gig__footer {
