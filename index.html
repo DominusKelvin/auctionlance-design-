@@ -18,6 +18,26 @@
         </a>
         <a href="/" class="brand">Auctionlance</a>
         <a href="/" class="mb-nav-link">Join</a>
+        
+        <!-- Mobile menu -->
+            <section class="mb-nav-sidebar">
+                <section class="wrapper">
+                    <section class="menu">
+                        <div>
+                            <p class="close">X</p>
+                        </div>
+                        <ul class="mobile-links">
+                            <li class="mb-nav-item"><a href="">How It Works</a></li>
+                            <li class="mb-nav-item"><a href="">Browse Gigs</a></li>
+                            <li class="mb-nav-item"><a href="">Join Auctionlance</a></li>
+                            <li class="mb-nav-item"><a href="">Sign In</a></li>
+                            <li class="mb-nav-item"><a href="">Sign Up</a></li>
+                        </ul>
+                    </section>
+                    <section class="overlay"></section>
+                </section>
+            </section>
+        <!-- Mobile menu ends here -->
         <section class="nav-wrapper">
             <ul class="left-nav">
                 <li class="nav-link"><a href="#how-it-works">How It Works</a></li>
@@ -348,5 +368,21 @@
         
     </footer>
     <!-- Footer ends here -->
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const mbNavSidebar = document.querySelector('.mb-nav-sidebar');
+        const closeNavbar = document.querySelector('.close');
+
+        function openSidebar() {
+            mbNavSidebar.classList.add('open');
+        }
+
+        function closeSidebar() {
+            mbNavSidebar.classList.remove('open');
+        }
+
+        hamburgerMenu.addEventListener('click', openSidebar)
+        closeNavbar.addEventListener('click', closeSidebar)
+    </script>
 </body>
 </html>
