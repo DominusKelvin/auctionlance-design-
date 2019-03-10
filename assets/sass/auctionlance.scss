@@ -52,6 +52,7 @@ nav {
             .hamburger-menu {
                 display: flex;
                 flex-direction: column;
+                cursor: pointer;
                 .ham {
                     width: 20.56px;
                     border: 3px solid #000000;
@@ -93,6 +94,7 @@ nav {
                             font-family: 'Lato', sans-serif;
                             font-size: 20px;
                             font-weight: 600;
+                            cursor: pointer;
                         }
 
                         .mobile-links {
