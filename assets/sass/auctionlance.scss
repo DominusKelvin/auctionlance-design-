@@ -4,6 +4,7 @@
 
 html {
     scroll-behavior: smooth;
+    transition: all 500ms; 
 }
 
 h1 {
@@ -32,33 +33,68 @@ nav {
     left: 0;
     top: 0;
 
-    .mobile-search {
+    .hamburger-menu, .mb-nav-link {
         display: none;
-
-        @media screen and (max-width: $mobile) {
-            display: block;
-            position: absolute;
-            width: 330px;
-            height: 31px;
-            left: 15px;
-            top: 58px;
-
-            background: #FFFFFF;
-            border: 1px solid #C4C4C4;
-            border-radius: 2px;
-        }
     }
     @media screen and (max-width: $mobile) {
         & {
+            height: 99px;
             position: static;
             background-color: $mobile-nav-color;
             box-shadow: none;
             justify-content: space-between;
             align-items: flex-start;
             padding: 18px;
-            height: 99px;
+
+            .hamburger-menu {
+                display: flex;
+                flex-direction: column;
+                .ham {
+                    width: 20.56px;
+                    border: 3px solid #000000;
+                    margin-bottom: 2px;
+                }
+            }
+
+            .mb-nav-link {
+                display: block;
+                font-family: 'Lato', sans-serif;
+                margin-top: 5px;
+                margin-right: -10px; 
+                font-weight: 600;
+
+            }
         }
     }
+    .mobile-search {
+        display: none;
+
+        @media screen and (max-width: $mobile) {
+            & {
+                display: flex;
+                justify-content: space-between;
+                padding: .3rem .5rem;
+                width: 90%;
+                position: absolute;
+                top: 70px;
+                left: 10px;
+                // height: 31px;
+                background: #FFFFFF;
+                border: 1px solid #C4C4C4;
+                border-radius: 2px;
+
+                .mobile-search__box {
+                    border: none;
+                    width: 100%;
+                    margin-left: 10px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+  
     a.brand {
         font-family: 'Lato', sans-serif;
         font-style: normal;
@@ -75,6 +111,8 @@ nav {
         @media screen and (max-width: $mobile) {
             & {
                 font-size: 18px;
+                margin-left: 35px;
+                margin-right: 20px;
             }
         }
     }

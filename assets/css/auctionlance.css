@@ -58,6 +58,8 @@ a {
 
 html {
   scroll-behavior: smooth;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 h1 {
@@ -93,26 +95,13 @@ nav {
   top: 0;
 }
 
-nav .mobile-search {
+nav .hamburger-menu, nav .mb-nav-link {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
-  nav .mobile-search {
-    display: block;
-    position: absolute;
-    width: 330px;
-    height: 31px;
-    left: 15px;
-    top: 58px;
-    background: #FFFFFF;
-    border: 1px solid #C4C4C4;
-    border-radius: 2px;
-  }
-}
-
-@media screen and (max-width: 768px) {
   nav {
+    height: 99px;
     position: static;
     background-color: #DFD4D4;
     -webkit-box-shadow: none;
@@ -124,7 +113,58 @@ nav .mobile-search {
         -ms-flex-align: start;
             align-items: flex-start;
     padding: 18px;
-    height: 99px;
+  }
+  nav .hamburger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .hamburger-menu .ham {
+    width: 20.56px;
+    border: 3px solid #000000;
+    margin-bottom: 2px;
+  }
+  nav .mb-nav-link {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    margin-top: 5px;
+    margin-right: -10px;
+    font-weight: 600;
+  }
+}
+
+nav .mobile-search {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav .mobile-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: .3rem .5rem;
+    width: 90%;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+  }
+  nav .mobile-search .mobile-search__box {
+    border: none;
+    width: 100%;
+    margin-left: 10px;
+  }
+  nav .mobile-search .mobile-search__box:focus {
+    outline: none;
   }
 }
 
@@ -145,6 +185,8 @@ nav a.brand {
 @media screen and (max-width: 768px) {
   nav a.brand {
     font-size: 18px;
+    margin-left: 35px;
+    margin-right: 20px;
   }
 }
 
