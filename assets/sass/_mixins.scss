@@ -1,3 +1,15 @@
-@mixin transition {
-    transition: all 1s;
+@import 'variables';
+
+// Mixin for background color gradient and also fallback solid color
+@mixin auct-bg-gradient {
+    background-color: $primary-color;
+    background: linear-gradient(270.26deg, rgba(255, 255, 255, 0) 3.36%, #E27B36 124.02%), #E21250;
+}
+
+// Mixin for text color gradient
+@mixin auct-text-gradient {
+    background: -webkit-linear-gradient($secondary-color, $primary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
