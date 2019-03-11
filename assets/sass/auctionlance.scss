@@ -761,10 +761,13 @@ footer {
     .auth-form {
         padding: 0px 48px;
         flex-basis: 50%;
+        margin-top: 20px;
         
+        .section-heading {
+            margin-bottom: 24px !important;
+        }
         .auct-form-group {
             margin-bottom: 30px;
-
             .auct-input {
                 width: 389px;
                 height: 39px;

@@ -931,6 +931,11 @@ footer hr {
   padding: 0px 48px;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  margin-top: 20px;
+}
+
+.authentication-wrapper .auth-form .section-heading {
+  margin-bottom: 24px !important;
 }
 
 .authentication-wrapper .auth-form .auct-form-group {
