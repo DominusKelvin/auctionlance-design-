@@ -310,14 +310,22 @@ nav .left-nav .nav-link a:hover, nav .right-nav .nav-link a:hover {
   background-color: #FFF;
   -webkit-transition: all 500ms;
   transition: all 500ms;
-  padding: 5px 25px;
   border-radius: 4px;
   -webkit-box-shadow: 0 0 1px 1px #C4C4C4;
           box-shadow: 0 0 1px 1px #C4C4C4;
 }
 
 .nav-dropdown li {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
+  padding: 5px 66px 5px 14px;
+  font-size: 14px;
+}
+
+.nav-dropdown .dropdown-divider {
+  border-top: 1px solid #e1e4e8;
+  display: block;
+  height: 0;
+  margin: 8px 0;
 }
 
 /***
@@ -1053,5 +1061,89 @@ footer hr {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/***
+** Auctoboard
+**/
+.auctoboard-wrapper {
+  font-family: 'Lato', sans-serif;
+  background-color: #FFF;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin: 150px 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.auctoboard-wrapper .aucto-sidebar {
+  padding-right: 16px;
+  width: 245px;
+}
+
+.auctoboard-wrapper .aucto-sidebar a {
+  color: #E21250;
+}
+
+.auctoboard-wrapper .aucto-sidebar a:hover, .auctoboard-wrapper .aucto-sidebar a:active {
+  text-decoration: underline;
+}
+
+.auctoboard-wrapper .aucto-sidebar .avatar {
+  border: 1px solid #E3E3E3;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.auctoboard-wrapper .aucto-sidebar .avatar .user-avatar {
+  width: 100%;
+}
+
+.auctoboard-wrapper .aucto-sidebar .user-names {
+  padding: 16px 0;
+}
+
+.auctoboard-wrapper .aucto-sidebar .user-names .user-fullname {
+  font-size: 26px;
+}
+
+.auctoboard-wrapper .aucto-sidebar .user-names .username {
+  color: #666;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.auctoboard-wrapper .aucto-sidebar .btn-section {
+  margin-top: 12px;
+}
+
+/**
+Utility
+**/
+.aucto-btn {
+  color: #FFF;
+  background-color: #E21250;
+  background: linear-gradient(270.26deg, rgba(255, 255, 255, 0) 3.36%, #E27B36 124.02%), #E21250;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 6px 30px;
+}
+
+.aucto-mega-btn {
+  padding: 12px 30px;
+}
+
+.aucto-block-btn {
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 /*# sourceMappingURL=auctionlance.css.map */

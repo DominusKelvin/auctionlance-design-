@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Auctoboard | Auctionlance</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/auctionlance.min.css">
+    </head>
+    <body>
+        <!-- Navbar section begins here -->
+    <nav>
+            <a class="hamburger-menu">
+                <span class="ham"></span>
+                <span class="ham"></span>
+                <span class="ham"></span>
+            </a>
+            <a href="/" class="brand">Auctionlance</a>
+            <a href="/" class="mb-nav-link">Join</a>
+
+            <!-- Mobile menu -->
+                <section class="mb-nav-sidebar">
+                    <section class="wrapper">
+                        <section class="menu">
+                            <div>
+                                <p class="close">X</p>
+                            </div>
+                            <ul class="mobile-links">
+                                <li class="mb-nav-item"><a href="">How It Works</a></li>
+                                <li class="mb-nav-item"><a href="">Browse Gigs</a></li>
+                                <li class="mb-nav-item"><a href="">Join Auctionlance</a></li>
+                                <li class="mb-nav-item"><a href="/signin.html">Sign In</a></li>
+                                <li class="mb-nav-item"><a href="">Sign Up</a></li>
+                            </ul>
+                        </section>
+                        <section class="overlay"></section>
+                    </section>
+                </section>
+            <!-- Mobile menu ends here -->
+            <section class="nav-wrapper">
+                <ul class="left-nav">
+                    <li class="nav-link"><a href="#how-it-works">How It Works</a></li>
+                    <li class="nav-link"><a href="">Browse Gigs</a></li>
+                </ul>
+                <ul class="right-nav">
+                    <li class="nav-link"><a href="">Join Auctionlance</a></li>
+                    <li class="nav-link"><a href="/signin.html">Sign In</a></li>
+                    <li class="nav-link"><a href="/signup.html">Sign Up</a></li>
+                    <li class="nav-link">
+                        <a href="#" class="jsDropdown">Hi Dominus</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="/auctoboard.html">Auctoboard</a></li>
+                            <li><a href="">Profile</a></li>
+                            <li><a href="">Jobs</a></li>
+                            <li><a href="">Gigs</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a href="">Sign out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <form method="GET">
+                    <section class="mobile-search">
+                        <img class="search-icon" src="assets/img/search-icon.svg" />
+                        <input type="text" class="mobile-search__box" name="search" id="home-search" placeholder="Find Services" />
+                    </section>
+                </form>
+            </section>
+        </nav>
+        <!-- Navbar section ends here -->
+
+        <section class="auctoboard-wrapper">
+            <section class="aucto-sidebar">
+                <section class="avatar">
+                    <img class="user-avatar" width="230" height="230" src="./assets/img/default.svg" />
+                </section>
+                <section class="user-names">
+                    <h1>
+                        <span class="user-fullname">Omereshone Kelvin Oghenerhoro</span>
+                        <span class="username">DominusKelvin</span>
+                    </h1>
+                </section>
+                <section class="more-details">
+                    <span><i class="fas fa-envelope"></i> <a href="">kelvinomereshone@gmail.com</a></span>
+                    <section class="btn-section">
+                        <button class="aucto-btn aucto-mega-btn aucto-block-btn">Edit</button>
+                    </section>
+                </section>
+            </section>
+            <main></main>
+        </section>
+
+        <script>
+                const hamburgerMenu = document.querySelector('.hamburger-menu');
+                const mbNavSidebar = document.querySelector('.mb-nav-sidebar');
+                const closeNavbar = document.querySelector('.close');
+
+                const dropdownToggle = document.querySelector('.jsDropdown');
+                const dropdownMenu = document.querySelector('.nav-dropdown')
+                function openSidebar() {
+                    mbNavSidebar.classList.add('open');
+                }
+
+                function closeSidebar() {
+                    mbNavSidebar.classList.remove('open');
+                }
+
+                hamburgerMenu.addEventListener('click', openSidebar)
+                closeNavbar.addEventListener('click', closeSidebar)
+                dropdownToggle.addEventListener('click', function(){
+                    dropdownMenu.classList.toggle('open');
+                })
+        </script>
+    </body>
+</html>
