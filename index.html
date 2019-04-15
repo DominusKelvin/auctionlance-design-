@@ -18,7 +18,7 @@
         </a>
         <a href="/" class="brand">Auctionlance</a>
         <a href="/" class="mb-nav-link">Join</a>
-        
+
         <!-- Mobile menu -->
             <section class="mb-nav-sidebar">
                 <section class="wrapper">
@@ -47,6 +47,16 @@
                 <li class="nav-link"><a href="">Join Auctionlance</a></li>
                 <li class="nav-link"><a href="/signin.html">Sign In</a></li>
                 <li class="nav-link"><a href="/signup.html">Sign Up</a></li>
+                <li class="nav-link">
+                    <a href="#" class="jsDropdown">Hi Dominus ˅</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="">Auctoboard</a></li>
+                        <li><a href="">Profile</a></li>
+                        <li><a href="">Jobs</a></li>
+                        <li><a href="">Gigs</a></li>
+                        <li><a href="">Log out</a></li>
+                    </ul>
+                </li>
             </ul>
         </section>
         <section>
@@ -147,7 +157,7 @@
     <section class="featured">
 
         <h2 class="section-heading">Featured Gigs</h2>
-        
+
         <!-- Featured gigs section starts here -->
         <section class="featured-gigs">
 
@@ -178,7 +188,7 @@
                     <p>Starting at $20</p>
                 </section>
             </section>
-            
+
             <section class="featured-gig">
                 <img src="assets/img/featured-gig.svg" class="featured-gig__image" alt="">
                 <section class="featured-gig__author">
@@ -260,7 +270,7 @@
 
     <!-- How auctionlance works section starts here -->
     <section class="how-auctionlance-works" id="how-it-works">
-        
+
         <h2 class="section-heading">How Auctionlance Works</h2>
 
         <section class="cards">
@@ -269,47 +279,47 @@
                         <section class="how-card__numbering">
                             <p>1.</p>
                         </section>
-            
+
                         <h3 class="how-card__title">POST A JOB</h3>
-            
+
                         <p class="how-card__description">Post a job, describe your job. Client gets matched smartly with qualified freelancers.</p>
-                        
+
                     </section>
-            
+
                     <section class="how-card">
-            
+
                         <section class="how-card__numbering">
                             <p>2.</p>
                         </section>
-            
+
                         <h3 class="how-card__title">FIND AND PICK</h3>
-            
+
                         <p class="how-card__description">Browse profiles, gigs freelancers, compare reviews & pick freelancer suit for you.</p>
-            
+
                     </section>
-            
+
                     <section class="how-card">
-            
+
                         <section class="how-card__numbering">
                             <p>3.</p>
                         </section>
-            
+
                         <h3 class="how-card__title">AWARD AND DEPOSIT</h3>
-            
+
                         <p class="how-card__description">Pick any freelancer of choice & enjoy 100% secured escrow system.</p>
-            
+
                     </section>
-            
+
                     <section class="how-card">
-            
+
                         <section class="how-card__numbering">
                             <p>4.</p>
                         </section>
-            
+
                         <h3 class="how-card__title">WORK AND APPROVE</h3>
-            
+
                         <p class="how-card__description">Chat with freelancer, share files & collaborate with freelancer. Approve payment once satisfied.</p>
-            
+
                     </section>
         </section>
 
@@ -330,7 +340,7 @@
                             <li><a href="">Web Development</a></li>
                         </ul>
                     </section>
-            
+
                     <section class="footer-details">
                         <h3 class="footer-details__title">About</h3>
                         <ul class="footer__links">
@@ -339,14 +349,14 @@
                             <li><a href="">Privacy Policy</a></li>
                         </ul>
                     </section>
-            
+
                     <section class="footer-details">
                         <h3 class="footer-details__title">Support</h3>
                         <ul class="footer__links">
                             <li><a href="">Help & Support</a></li>
                         </ul>
                     </section>
-            
+
                     <section class="footer-details">
                         <h3 class="footer-details__title">Community</h3>
                         <ul class="footer__links">
@@ -355,7 +365,7 @@
                             <li><a href="">Forum</a></li>
                         </ul>
                     </section>
-            
+
                     <section class="footer-details">
                         <h3 class="footer-details__title">Community</h3>
                         <ul class="footer__links">
@@ -365,7 +375,7 @@
         </section>
 
         <hr>
-        
+
     </footer>
     <!-- Footer ends here -->
     <script>
@@ -373,6 +383,8 @@
         const mbNavSidebar = document.querySelector('.mb-nav-sidebar');
         const closeNavbar = document.querySelector('.close');
 
+        const dropdownToggle = document.querySelector('.jsDropdown');
+        const dropdownMenu = document.querySelector('.nav-dropdown')
         function openSidebar() {
             mbNavSidebar.classList.add('open');
         }
@@ -383,6 +395,9 @@
 
         hamburgerMenu.addEventListener('click', openSidebar)
         closeNavbar.addEventListener('click', closeSidebar)
+        dropdownToggle.addEventListener('click', function(){
+            dropdownMenu.classList.toggle('open');
+        })
     </script>
 </body>
 </html>

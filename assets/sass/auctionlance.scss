@@ -4,7 +4,7 @@
 
 html {
     scroll-behavior: smooth;
-    transition: all 500ms; 
+    transition: all 500ms;
 }
 
 ::selection {
@@ -42,7 +42,7 @@ nav {
         display: none;
     }
 
-    
+
 
     @media screen and (max-width: $mobile) {
         & {
@@ -64,12 +64,12 @@ nav {
                     margin-bottom: 2px;
                 }
             }
-            
+
             .mb-nav-link {
                 display: block;
                 font-family: 'Lato', sans-serif;
                 margin-top: 5px;
-                margin-right: -10px; 
+                margin-right: -10px;
                 font-weight: 600;
 
             }
@@ -150,7 +150,7 @@ nav {
             }
         }
     }
-  
+
     a.brand {
         font-family: 'Lato', sans-serif;
         font-style: normal;
@@ -160,7 +160,7 @@ nav {
         color: $primary-color;
         @include auct-text-gradient;
         text-transform: uppercase;
-        
+
         @media screen and (max-width: $mobile) {
             & {
                 font-size: 18px;
@@ -184,7 +184,7 @@ nav {
         font-family: 'Lato', sans-serif;
         display: flex;
         align-items: flex-end;
-        
+
         .nav-link {
             margin: 0 20px;
             a {
@@ -194,9 +194,30 @@ nav {
             }
         }
     }
-    
+
 }
 
+/***
+    * Navbar Dropdown
+***/
+.nav-dropdown.open {
+    display: block;
+}
+.nav-dropdown {
+    display: none;
+    position: fixed;
+    top: 5rem;
+    right: 3rem;
+    background-color: $auct-white;
+    transition: all 500ms;
+    padding: 5px 25px;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 1px $auctionlance-dark-gray;
+
+    li {
+        margin: 1.5rem 0;
+    }
+}
 
 /***
     * Hero section
@@ -246,7 +267,7 @@ nav {
             line-height: normal;
             font-size: $subtitle;
             margin-bottom: 47px;
-            
+
             @media screen and (max-width: $mobile) {
                 & {
                     font-weight: normal;
@@ -264,9 +285,9 @@ nav {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 2px;
             padding-left: 20px;
-            
+
             display: flex;
-            
+
             .hero-search__box {
                 margin-left: 10px;
                 font-family: 'Roboto', sans-serif;
@@ -290,7 +311,7 @@ nav {
         }
 
     }
-    
+
 }
 
 @media screen and (max-width: $mobile) {
@@ -313,25 +334,25 @@ nav {
         margin-top: 24px;
         margin-left: 20px;
         margin-right: 20px;
-    }  
+    }
 }
 
 .categories {
     margin-left: 90px;
     margin-right: 90px;
 
-    
+
     @media screen and (max-width: $mobile) {
         & {
             margin-left: 20px;
-            margin-right: 20px; 
+            margin-right: 20px;
         }
     }
 }
 .explore {
 
     .categories {
-        
+
         display: flex;
         justify-content: center;
 
@@ -349,7 +370,7 @@ nav {
                 & {
                     width: auto;
                     margin: 10px 8px 20px 15px;
-                    
+
                 }
             }
             p {
@@ -404,7 +425,7 @@ nav {
             box-sizing: border-box;
             margin-bottom: 84px;
             margin-left: 56px;
-            
+
             @media screen and (max-width: $mobile) {
                 margin-left: 0;
                 margin-right: 10px;
@@ -423,7 +444,7 @@ nav {
                     margin-top: 5px;
                 }
 
-                
+
             }
             .featured-gig__description {
                 font-family: 'Lato', sans-serif;
@@ -480,7 +501,7 @@ nav {
     height: 393px;
     background-color: $primary-color;
     background: linear-gradient(270.27deg, rgba(255, 255, 255, 0) 3.36%, #E27B36 124.02%), #E21250;
-    
+
     @media screen and (max-width: $mobile) {
         & {
             margin: 45px 0;
@@ -496,7 +517,7 @@ nav {
         font-size: 40px;
         color: #FFFFFF;
         margin-bottom: 19px;
-        
+
         @media screen and (max-width: $mobile) {
             & {
                 font-size: 16px;
@@ -561,7 +582,7 @@ nav {
             border-radius: 4px;
             margin-right: 36px;
             padding: 27px 23px;
-            
+
             @media screen and (max-width: $mobile) {
                 & {
                     flex-shrink: 0;
@@ -628,7 +649,7 @@ footer {
         }
     }
     h3.footer__brand {
-        
+
         font-family: Lato;
         font-style: normal;
         font-weight: 800;
@@ -645,7 +666,7 @@ footer {
                 font-size: 18px;
             }
         }
-    } 
+    }
 
     .footer-details-container {
         margin-left: 114px;
@@ -654,7 +675,7 @@ footer {
         @media screen and (max-width: $mobile) {
             margin-left: 15px;
         }
-        
+
         @media screen and (max-width: $mobile) {
             & {
                 flex-wrap: wrap;
@@ -669,13 +690,13 @@ footer {
                 line-height: normal;
                 font-size: 20px;
                 color: #4C4848;
-                
+
                 @media screen and (max-width: $mobile) {
                     & {
                         font-size: 16px;
                     }
                 }
-    
+
             }
             .footer__links {
                 font-family: Lato;
@@ -684,7 +705,7 @@ footer {
                 line-height: normal;
                 font-size: 16px;
                 width: 155px;
-                li> a { 
+                li> a {
                 color: #4C4848;
                 }
 
@@ -704,12 +725,12 @@ footer {
                 }
             }
         }
-        
+
     }
     hr {
         margin-top: 72px;
         border: 1px solid #c4c4c4;
-        
+
     }
 }
 
@@ -762,7 +783,12 @@ footer {
         padding: 0px 48px;
         flex-basis: 50%;
         margin-top: 20px;
-        
+
+        @media screen and (max-width: $mobile) {
+            & {
+                padding: 0px 22px;
+            }
+        }
         .section-heading {
             margin-bottom: 24px !important;
         }
@@ -792,7 +818,7 @@ footer {
                     outline-color: $secondary-color;
                 }
             }
-            
+
         }
         .auct-form-group:last-child {
             margin-bottom: 20px !important;
@@ -806,7 +832,7 @@ footer {
             height: 53px;
             border-radius: 2px;
             font-family: 'Roboto', sans-serif;
-            font-size: 14px; 
+            font-size: 14px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
             padding: 6px 30px 6px 30px;
 
@@ -829,4 +855,15 @@ footer {
             }
         }
     }
+}
+
+.is-invalid {
+    border: 1px solid $border-color;
+}
+
+.error-message {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+    @include auct-text-gradient;
 }
