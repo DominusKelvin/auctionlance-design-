@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'utilities';
+@import 'mixins';
+
+.new-form {
+    margin: 10rem auto;
+    width: 50%;
+    @media screen and (max-width: 767px) {
+        margin: 2rem auto;
+        width: 90%;
+    }
+    .new-form__form {
+        margin-top: 2rem;
+    }
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 10px;
+}
+.form-row-single {
+    grid-template-columns: 1fr;
+}
+.form-row-triple {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.form-input {
+    width: 100%;
+    padding: .8rem 1rem;
+    border-radius: 4px;
+    color: #666;
+    border: 1px solid $auctionlance-gray;
+    box-sizing: border-box;
+    font-size: 16px;
+
+    &:focus {
+        outline-color: transparent;
+        border-color: $secondary-color;
+    }
+}

@@ -1,10 +1,12 @@
 @import "reset";
 @import "variables";
+@import "utilities";
 @import "mixins";
 
 html {
     scroll-behavior: smooth;
     transition: all 500ms;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 ::selection {
@@ -14,7 +16,6 @@ html {
 
 h1 {
     font-size: $heading;
-    font-family: 'Lato', sans-serif;
     @media screen and (max-width: $mobile){
         & {
             font-size: $heading-sm;
@@ -67,7 +68,7 @@ nav {
 
             .mb-nav-link {
                 display: block;
-                font-family: 'Lato', sans-serif;
+                font-family: 'Titillium Web', sans-serif;
                 margin-top: 5px;
                 margin-right: -10px;
                 font-weight: 600;
@@ -96,7 +97,6 @@ nav {
                         div {
                             display: flex;
                             justify-content: flex-end;
-                            font-family: 'Lato', sans-serif;
                             font-size: 20px;
                             font-weight: 600;
                             cursor: pointer;
@@ -107,7 +107,6 @@ nav {
 
                             .mb-nav-item {
                                 margin-bottom: 30px;
-                                font-family: 'Lato', sans-serif;
                                 a {
                                     color: #fff;
                                 }
@@ -152,7 +151,6 @@ nav {
     }
 
     a.brand {
-        font-family: 'Lato', sans-serif;
         font-style: normal;
         font-weight: 800;
         line-height: normal;
@@ -181,7 +179,7 @@ nav {
         }
     }
     .left-nav, .right-nav {
-        font-family: 'Lato', sans-serif;
+        font-family: 'Titillium Web', sans-serif;
         display: flex;
         align-items: flex-end;
 
@@ -267,10 +265,7 @@ nav {
             }
         }
         .hero-subtitle {
-            font-family: 'Lato', sans-serif;
-            font-family: Lato;
             font-style: normal;
-            font-weight: 800;
             line-height: normal;
             font-size: $subtitle;
             margin-bottom: 47px;
@@ -297,10 +292,8 @@ nav {
 
             .hero-search__box {
                 margin-left: 10px;
-                font-family: 'Roboto', sans-serif;
                 font-style: normal;
                 line-height: normal;
-                font-weight: 600;
                 font-size: 16px;
                 color: #8C8787;
                 border: none;
@@ -382,11 +375,9 @@ nav {
             }
             p {
                 margin-top: 19px;
-                font-family: 'Lato', sans-serif;
                 font-style: normal;
-                font-weight: bold;
                 line-height: normal;
-                font-size: 18px;
+                font-size: 16px;
                 color: #4C4848;
 
                 @media screen and (max-width: $mobile) {
@@ -400,7 +391,6 @@ nav {
 }
 
 .section-heading {
-    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -423,16 +413,43 @@ nav {
 
 .featured {
     .featured-gigs {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 220px;
+        margin-bottom: 2rem;
         .featured-gig {
-            width: 283px;
-            height: 342px;
+            width: 100%;
             background: #FFFFFF;
-            border: 1px solid #DED5D5;
+            border-color: transparent;
             box-sizing: border-box;
-            margin-bottom: 84px;
-            margin-left: 56px;
+            &:hover .featured-gig__body{
+                transform: translateY(-10px);
+            }
 
+            &:hover .featured-gig__image {
+                transform: scale(1.000001);
+            }
+
+            .featured-gig__body {
+                position: absolute;
+                max-width: 266.75px;
+                background-color: #242729;
+                border-radius: 10px;
+                box-sizing: border-box;
+                margin-top: -20px;
+                padding-top: 20px;
+                box-shadow: 0 1px 4px 0px #272727;
+                transition: all .1s;
+            }
+
+            .featured-gig__image {
+                z-index: -23 !important;
+                border-radius: 10px;
+                transition: all .1s;
+                width: 100%;
+                height: 100%;
+            }
             @media screen and (max-width: $mobile) {
                 margin-left: 0;
                 margin-right: 10px;
@@ -441,12 +458,10 @@ nav {
                 display: flex;
 
                 .featured-gig__author-name {
-                    font-family: 'Lato', sans-serif;
                     font-style: italic;
-                    font-weight: bold;
                     line-height: normal;
                     font-size: 18px;
-                    color: #4C4848;
+                    color: #BFBEBE;
                     margin-left: 10px;
                     margin-top: 5px;
                 }
@@ -454,16 +469,17 @@ nav {
 
             }
             .featured-gig__description {
-                font-family: 'Lato', sans-serif;
                 font-style: normal;
                 font-weight: normal;
                 line-height: normal;
-                font-size: 18px;
-                color: #8C8787;
-                margin-top: 19px;
+                font-size: 16px;
+                color: #BFBEBE;
             }
 
-            .featured-gig__author, .featured-gig__description {
+            .featured-gig__author {
+                margin: 0 18px;
+            }
+            .featured-gig__description {
                 margin: 9px 18px;
             }
         }
@@ -480,15 +496,14 @@ nav {
         align-items: center;
         padding: 15px 8px;
         justify-content: flex-end;
-        border-top: 1px solid rgba(196, 196, 196, 0.3);
+        border-top: 1px solid rgba(14, 13, 13, 0.3);
         text-transform: uppercase;
         p {
-            font-family: 'Lato', sans-serif;
             font-style: normal;
             font-weight: normal;
             line-height: normal;
             font-size: 14px;
-            color: #3C3A3A;
+            color: #BFBEBE;
 
         }
     }
@@ -504,7 +519,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 154px 58px;
+    margin: 225px 58px;
     height: 393px;
     background-color: $primary-color;
     background: linear-gradient(270.27deg, rgba(255, 255, 255, 0) 3.36%, #E27B36 124.02%), #E21250;
@@ -517,7 +532,6 @@ nav {
         }
     }
     h2 {
-        font-family: 'Lato', sans-serif;
         font-style: normal;
         font-weight: 800;
         line-height: normal;
@@ -533,9 +547,7 @@ nav {
         }
     }
     p {
-        font-family: 'Lato', sans-serif;
         font-style: normal;
-        font-weight: 800;
         line-height: normal;
         font-size: 18px;
         color: #FFFFFF;
@@ -556,7 +568,6 @@ nav {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 7px;
-    font-family: Lato;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -604,7 +615,6 @@ nav {
                 border: 2px solid #D6292D;
                 box-sizing: border-box;
                 padding: 13px 20px;
-                font-family: Lato;
                 font-style: normal;
                 font-weight: bold;
                 line-height: normal;
@@ -615,7 +625,6 @@ nav {
 
             .how-card__title {
                 margin-bottom: 22px;
-                font-family: Lato;
                 font-style: normal;
                 font-weight: normal;
                 line-height: normal;
@@ -624,7 +633,6 @@ nav {
             }
 
             .how-card__description {
-                font-family: 'Lato', sans-serif;
                 font-style: normal;
                 font-weight: normal;
                 line-height: normal;
@@ -645,7 +653,7 @@ nav {
 
 footer {
     margin-top: 195px;
-    background-color: #e3e3e3;
+    background-color: #FAFAFA;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 44px 64px;
 
@@ -657,7 +665,6 @@ footer {
     }
     h3.footer__brand {
 
-        font-family: Lato;
         font-style: normal;
         font-weight: 800;
         line-height: normal;
@@ -691,10 +698,9 @@ footer {
         .footer-details {
             margin-right: 80px;
             .footer-details__title {
-                font-family: 'Lato', sans-serif;
                 font-style: normal;
-                font-weight: bold;
                 line-height: normal;
+                font-weight: bold;
                 font-size: 20px;
                 color: #4C4848;
 
@@ -706,9 +712,7 @@ footer {
 
             }
             .footer__links {
-                font-family: Lato;
                 font-style: normal;
-                font-weight: bold;
                 line-height: normal;
                 font-size: 16px;
                 width: 155px;
@@ -736,7 +740,7 @@ footer {
     }
     hr {
         margin-top: 72px;
-        border: 1px solid #c4c4c4;
+        border: 1px solid #e3e3e3;
 
     }
 }
@@ -767,7 +771,6 @@ footer {
         padding: 48px;
         flex-basis: 50%;
         p {
-            font-family: 'Lato', sans-serif;
             font-style: normal;
             font-weight: bold;
             line-height: normal;
@@ -809,7 +812,6 @@ footer {
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.09);
                 border-radius: 2px;
                 padding: 6px 30px 6px 30px;
-                font-family: 'Roboto', sans-serif;
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
@@ -838,7 +840,6 @@ footer {
             width: 451px;
             height: 53px;
             border-radius: 2px;
-            font-family: 'Roboto', sans-serif;
             font-size: 14px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
             padding: 6px 30px 6px 30px;
@@ -851,7 +852,6 @@ footer {
 
         }
         .auth-text {
-            font-family: 'Lato', sans-serif;
             font-size: 14px;
             margin-bottom: 30px;
             color: #8C8787;
@@ -864,22 +864,10 @@ footer {
     }
 }
 
-.is-invalid {
-    border: 1px solid $border-color;
-}
-
-.error-message {
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    margin-top: 5px;
-    @include auct-text-gradient;
-}
-
 /***
 ** Auctoboard
 **/
 .auctoboard-wrapper {
-    font-family: 'Lato', sans-serif;
     background-color: $auct-white;
     padding-right: 16px;
     padding-left: 16px;
@@ -922,26 +910,3 @@ footer {
     }
 }
 
-/**
-Utility
-**/
-.aucto-btn {
-    color: $auct-white;
-    @include auct-bg-gradient;
-    border: none;
-    cursor: pointer;
-    border-radius: 2px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    padding: 6px 30px;
-}
-.aucto-mega-btn {
-    padding: 12px 30px
-}
-
-.aucto-block-btn {
-    display: block;
-    text-align: center;
-    width: 100%;
-}
